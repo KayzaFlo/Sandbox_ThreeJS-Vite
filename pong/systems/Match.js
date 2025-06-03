@@ -25,7 +25,7 @@ class Match {
 				this.participants[i].nickname = myNickname;
 				this.self = this.participants[i];
 			} else {
-				this.participants.push( new Player( new Vector3( -7.2 + 14.4 * i, 0, 0 ), i ) );
+				this.participants.push( new Opponent( new Vector3( -7.2 + 14.4 * i, 0, 0 ), i ) );
 				this.participants[i].nickname = opponentNickname;
 				this.opponent = this.participants[i];
 			}

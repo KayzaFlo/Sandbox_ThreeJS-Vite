@@ -59,6 +59,13 @@ class Paddle extends Mesh {
 
 	}
 
+	dash() {
+		if ( this.speed == initialSpeed && this.dashCount >= 1 ) {
+			this.speed = initialBoostSpeed;
+			this.dashCount -= 1;
+		}
+	}
+
 	smash() {
 		if ( this.smashCd > 0 )
 			return;
@@ -146,6 +153,9 @@ class Paddle extends Mesh {
 		} else {
 			this.position.add( this.movement.clone().multiplyScalar( this.speed * dt ) );
 		}		
+	}
+
+	onCollision( hit ) {
 	}
 
 	delete() {
