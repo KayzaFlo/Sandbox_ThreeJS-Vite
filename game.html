@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+	<audio id="ambient" src="/sounds/ambient.mp3" loop preload="auto" autoplay style="display: none;"></audio>
+	<audio id="boom" src="/sounds/boom.wav" preload="auto" style="display: none;"></audio>
+	<audio id="crash" src="/sounds/crash.ogg" preload="auto" style="display: none;"></audio>
+	<audio id="fanfare" src="/sounds/fanfare.mp3" preload="auto" style="display: none;"></audio>
+	<audio id="hit" src="/sounds/hit.flac" preload="auto" style="display: none;"></audio>
+	<audio id="coin" src="/sounds/insert-coin.mp3" preload="auto" style="display: none;"></audio>
+	<audio id="notif" src="/sounds/notif.wav" preload="auto" style="display: none;"></audio>
+
+	
+	<canvas id="bg"></canvas>	
+	
+	
+    <main>
+		<div id="left-player-name" style="font-size: 2rem; color: white; display: none;">Left Player</div>
+		<div id="right-player-name" style="font-size: 2rem; color: white; display: none;">Right Player</div>
+		<button id="start-button" style="display: block;">Start Game</button>
+		<button id="backToMenu-button" style="display: none;">Back To Menu</button>
+
+	</main>
+
+
+
+
+    <script type="module" src="/pong/Pong.js"></script>
+  </body>
+</html>
