@@ -1,5 +1,7 @@
 import { Clock } from 'three';
 
+import workerlink from '/pong/worker.js?url';
+
 const clock = new Clock();
 const updatables = [];
 
@@ -21,8 +23,10 @@ class Loop {
 			renderer.setAnimationLoop(null);
 		}
 
-		let worker = new Worker('/pong/worker.js');
-		worker.addEventListener( "message", this.fixedTick, false );
+		let worker = new Worker(workerlink);
+		worker.onmessage = (e) => {
+			this.fixedTick(e);
+		}
 
 		timeFreezed = 0;
 	}

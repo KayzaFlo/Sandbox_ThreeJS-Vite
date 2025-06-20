@@ -27,9 +27,7 @@ class Player extends Paddle {
 			// this.speed = initialSpeed;
 		};
 		this.reflectButtonPressedEvent = (e) => this.smash();
-		if ( World._instance.currentGameMode == "Upgraded" ) {
-			console.log("boostButtonPressed" + this.playerId);
-			
+		if ( World._instance.currentGameMode == "Upgraded" ) {			
 			document.addEventListener( "boostButtonPressed" + this.playerId, this.boostButtonPressedEvent );
 			document.addEventListener( "boostButtonReleased" + this.playerId, this.boostButtonReleasedEvent );
 			document.addEventListener( "reflectButtonPressed" + this.playerId, this.reflectButtonPressedEvent );
