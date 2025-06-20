@@ -11,7 +11,7 @@ export default defineConfig({
 			input: {
 				main: resolve(__dirname, 'index.html'),
 				pong: resolve(__dirname, 'pong/index.html'),
-				unity: resolve(__dirname, 'unity/index.html')
+				// unity: resolve(__dirname, 'unity/index.html')
 			}
 		}
 	},
